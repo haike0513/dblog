@@ -5,12 +5,14 @@
     "db:pull": "deno --env -A --node-modules-dir npm:drizzle-kit pull",
     "db:push": "deno --env -A --node-modules-dir npm:drizzle-kit push",
     "db:generate": "deno -A --node-modules-dir npm:drizzle-kit generate",
+    "typecheck": "react-router typegen",
     "dev": "react-router dev",
     "build": "react-router build",
     "start": "deno run --env -A server/main.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
+    "rootDirs": [".", "./.react-router/types"],
     "lib": [
       "dom",
       "deno.ns"

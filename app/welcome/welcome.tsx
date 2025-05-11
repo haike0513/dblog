@@ -1,7 +1,12 @@
+// "use client"
+import { useCallback } from "react";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
 export function Welcome({ message, list = [] }: { message: string, list: any[] }) {
+  const handleNextPage = useCallback(() => {
+    console.log("");
+  }, []);
   return (
     <main className="flex h-screen items-center justify-center">
       <div className="flex flex-col items-center gap-16">
@@ -26,7 +31,9 @@ export function Welcome({ message, list = [] }: { message: string, list: any[] }
           <p className="leading-6 text-gray-700 dark:text-gray-200">
             What&apos;s next?
           </p>
-          <div>
+          <div
+          onClick={handleNextPage}
+          >
             {JSON.stringify(list)}
           </div>
           <ul>
