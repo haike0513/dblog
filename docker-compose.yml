@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     image: hblog
     environment:
-      DATABASE_URL: postgres://postgres:postgreshblog@postgres:5432/dispatcher
+      DATABASE_URL: postgres://postgres:postgreshblog@postgres:5432/postgres
     ports:
       - "3000:3000"
     networks:
