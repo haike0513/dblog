@@ -1,1 +1,0 @@
-# This is a blog platform build with deno and hono
