@@ -1,0 +1,33 @@
+# version: '3.8'
+
+services:
+  postgres:
+    container_name: hblog_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgreshblog
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  
+  hblog:
+    container_name: hblog_dispatcher
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: hblog
+    environment:
+      DATABASE_URL: postgres://postgres:postgreshblog@postgres:5432/dispatcher
+    ports:
+      - "3000:3000"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge

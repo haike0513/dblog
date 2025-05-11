@@ -3,7 +3,7 @@
     "db:pull": "deno --env -A --node-modules-dir npm:drizzle-kit pull",
     "db:push": "deno --env -A --node-modules-dir npm:drizzle-kit push",
     "db:generate": "deno -A --node-modules-dir npm:drizzle-kit generate",
-    "dev": "deno run -A --env --node-modules-dir src/main.ts"
+    "dev": "deno run -A --env src/main.ts"
   },
   "imports": {
     "@libsql/client": "npm:@libsql/client@^0.15.4",
