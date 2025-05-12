@@ -97,8 +97,6 @@ export default async function handleRequest(
         // const body = new PassThrough();
         // const stream = createReadableStreamFromReadable(body);
 
-        responseHeaders.set("Content-Type", "text/html");
-
         // resolve();
 
         // pipe(body);
@@ -117,6 +115,7 @@ export default async function handleRequest(
       },
     },
   );
+  responseHeaders.set("Content-Type", "text/html");
   return new Response(stream, {
     headers: responseHeaders,
     status: responseStatusCode,
