@@ -12,6 +12,9 @@ export default defineConfig(({ isSsrBuild }) => ({
   //       }
   //     : undefined,
   // },
+  build: {
+    target: "ESNEXT",
+  },
   plugins: [deno(), tailwindcss(), reactRouter(), tsconfigPaths()],
       ssr: {
       resolve: {
