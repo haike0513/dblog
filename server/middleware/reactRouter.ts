@@ -6,6 +6,8 @@ import {createRequestHandler} from "react-router"
 // import * as build from "./entry.server.tsx";
 
 export default createMiddleware(async (c, next) => {
+  // const handler = createRequestHandler(() => import("virtual:react-router/server-build"), "production")
+
   const handler = createRequestHandler(build as any, "production")
   const loaderContext = {
     HELLO_FROM_HONO: "hello from hono",

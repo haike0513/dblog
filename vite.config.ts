@@ -16,10 +16,23 @@ export default defineConfig(({ isSsrBuild }) => ({
   build: {
     target: "ESNEXT",
   },
+  server: {
+    watch: {}
+  },
   plugins: [
     deno(),
     devServer({
       entry: "server/app.tsx", // The file path of your application.
+      exclude: [
+        // /.*\.css$/,  this file will be exclude
+        /.*\.ts$/,
+        /.*\.tsx$/,
+        /^\/@.+$/,
+        /\?t\=\d+$/,
+        /^\/favicon\.ico$/,
+        /^\/static\/.+/,
+        /^\/node_modules\/.*/,
+      ],
     }),
     tailwindcss(),
     reactRouter(),

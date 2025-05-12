@@ -23,6 +23,7 @@
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
     "@hono/hono": "jsr:@hono/hono@^4.7.9",
+    "hono": "jsr:@hono/hono@^4.7.9",
     "@react-router/dev": "npm:@react-router/dev@^7.5.3",
     "@tailwindcss/node": "npm:@tailwindcss/node@^4.1.6",
     "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.6",
