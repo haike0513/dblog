@@ -2,6 +2,7 @@
   "version": "5",
   "specifiers": {
     "npm:@deno/vite-plugin@^1.0.4": "1.0.4_vite@6.3.5__picomatch@4.0.2_@types+node@20.17.46",
+    "npm:@hono/vite-dev-server@0.19": "0.19.0_hono@4.7.9",
     "npm:@react-router/dev@7.6.0": "7.6.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_vite@6.3.5__picomatch@4.0.2_@babel+core@7.27.1_react@19.1.0_react-dom@19.1.0__react@19.1.0_typescript@5.8.3_@types+node@20.17.46",
     "npm:@react-router/dev@^7.5.3": "7.6.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_vite@6.3.5__picomatch@4.0.2_@babel+core@7.27.1_react@19.1.0_react-dom@19.1.0__react@19.1.0_typescript@5.8.3_@types+node@20.17.46",
     "npm:@react-router/express@^7.5.3": "7.6.0_express@5.1.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_typescript@5.8.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -35,6 +36,7 @@
     "npm:tailwindcss@^4.1.4": "4.1.6",
     "npm:typescript@^5.8.3": "5.8.3",
     "npm:vite-tsconfig-paths@^5.1.4": "5.1.4_vite@6.3.5__picomatch@4.0.2_typescript@5.8.3_@types+node@20.17.46",
+    "npm:vite@6.3.5": "6.3.5_picomatch@4.0.2_@types+node@20.17.46",
     "npm:vite@^6.3.3": "6.3.5_picomatch@4.0.2_@types+node@20.17.46",
     "npm:vite@^6.3.5": "6.3.5_picomatch@4.0.2_@types+node@20.17.46"
   },
@@ -549,6 +551,20 @@
       "integrity": "sha512-nOT2vZNw6hJ+z43oP1SPea/G/6AbN6X+bGNhNuq8NtRHy4wsMhw765IKLNmnjek7GvjWBYQ8Q5VBoYTFg9y1UQ==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@hono/node-server@1.14.1_hono@4.7.9": {
+      "integrity": "sha512-vmbuM+HPinjWzPe7FFPWMMQMsbKE9gDPhaH0FFdqbGpkT5lp++tcWDTxwBl5EgS5y6JVgIaCdjeHRfQ4XRBRjQ==",
+      "dependencies": [
+        "hono"
+      ]
+    },
+    "@hono/vite-dev-server@0.19.0_hono@4.7.9": {
+      "integrity": "sha512-myMc4Nm0nFQSPaeE6I/a1ODyDR5KpQ4EHodX4Tu/7qlB31GfUemhUH/WsO91HJjDEpRRpsT4Zbg+PleMlpTljw==",
+      "dependencies": [
+        "@hono/node-server",
+        "hono",
+        "minimatch"
+      ]
     },
     "@isaacs/cliui@8.0.2": {
       "integrity": "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==",
@@ -2545,6 +2561,7 @@
     ],
     "packageJson": {
       "dependencies": [
+        "npm:@hono/vite-dev-server@0.19",
         "npm:@react-router/dev@^7.5.3",
         "npm:@react-router/express@^7.5.3",
         "npm:@react-router/node@^7.5.3",
