@@ -1,7 +1,7 @@
 // server/middleware/reactRouter.js
 
 import * as build from "../../build/server/index.js"
-import {createMiddleware} from "hono/factory"
+import {createMiddleware} from "@hono/hono/factory"
 import {createRequestHandler} from "react-router"
 // import * as build from "./entry.server.tsx";
 
