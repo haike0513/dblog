@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import devServer from "@hono/vite-dev-server";
+import react from '@vitejs/plugin-react-swc'
+import nodeAdapter from '@hono/vite-dev-server/bun'
+
 
 export default defineConfig(({ isSsrBuild }) => ({
   // build: {
@@ -20,11 +23,14 @@ export default defineConfig(({ isSsrBuild }) => ({
     watch: {}
   },
   plugins: [
+    react({}),
     deno(),
     devServer({
       entry: "server/app.tsx", // The file path of your application.
+      adapter: nodeAdapter(),
       exclude: [
         // /.*\.css$/,  this file will be exclude
+        // '/assets/*',
         /.*\.ts$/,
         /.*\.tsx$/,
         /^\/@.+$/,
