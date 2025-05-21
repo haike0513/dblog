@@ -8,6 +8,7 @@
     "typecheck": "react-router typegen",
     "router:dev": "react-router dev",
     "dev": "vite dev",
+    "vite:build": "vite build",
     "build": "react-router build",
     "start": "deno run --env -A server/main.ts"
   },
