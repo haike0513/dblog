@@ -7,9 +7,9 @@ import App  from "./App.tsx";
 startTransition(() => {
   hydrateRoot(
     document,
-    <StrictMode>
-      {/* <HydratedRouter /> */}
       <App />
-    </StrictMode>
+    // <StrictMode>
+    //   <HydratedRouter />
+    // </StrictMode>
   );
 });

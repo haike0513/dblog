@@ -23,7 +23,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     watch: {}
   },
   plugins: [
-    react({}),
+    react(),
     deno(),
     // devServer({
     //   entry: "server/app.tsx", // The file path of your application.
@@ -41,13 +41,13 @@ export default defineConfig(({ isSsrBuild }) => ({
     //   ],
     // }),
     tailwindcss(),
-    reactRouter(),
+    // reactRouter(),
     // tsconfigPaths(),
   ],
-  ssr: {
-    resolve: {
-      conditions: ["module", "deno", "node", "development|production"],
-      externalConditions: ["deno", "node"],
-    },
-  },
+  // ssr: {
+  //   resolve: {
+  //     conditions: ["module", "deno", "node", "development|production"],
+  //     externalConditions: ["deno", "node"],
+  //   },
+  // },
 }));

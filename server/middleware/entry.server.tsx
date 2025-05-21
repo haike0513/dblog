@@ -7,6 +7,7 @@ import { isbot } from "isbot";
 import type { RenderToPipeableStreamOptions } from "react-dom/server";
 // import { renderToPipeableStream } from "react-dom/server.node";
 import { renderToReadableStream } from "react-dom/server";
+import App from "../../app/App.tsx";
 
 export const streamTimeout = 5_000;
 
@@ -18,7 +19,23 @@ export default async function handleRequest(
 
   const stream = await renderToReadableStream(
     <StaticRouter location={request.url}>
-      <script src="/app/entry.client.tsx" />
+      <html>
+        <head>
+          <title>Hello World</title>
+          <script type="module">
+{`import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true`}
+</script>
+        </head>
+        <body>
+          <App />
+          <script type="module" src="/app/main.tsx" />
+        </body>
+      </html>
+
 
     </StaticRouter>
   );
