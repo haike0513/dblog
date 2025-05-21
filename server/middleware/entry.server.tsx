@@ -18,7 +18,8 @@ export default async function handleRequest(
 
   const stream = await renderToReadableStream(
     <StaticRouter location={request.url}>
-      
+      <script src="/app/entry.client.tsx" />
+
     </StaticRouter>
   );
   responseHeaders.set("Content-Type", "text/html");
