@@ -25,24 +25,24 @@ export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
     react({}),
     deno(),
-    devServer({
-      entry: "server/app.tsx", // The file path of your application.
-      adapter: nodeAdapter(),
-      exclude: [
-        // /.*\.css$/,  this file will be exclude
-        // '/assets/*',
-        /.*\.ts$/,
-        /.*\.tsx$/,
-        /^\/@.+$/,
-        /\?t\=\d+$/,
-        /^\/favicon\.ico$/,
-        /^\/static\/.+/,
-        /^\/node_modules\/.*/,
-      ],
-    }),
+    // devServer({
+    //   entry: "server/app.tsx", // The file path of your application.
+    //   adapter: nodeAdapter(),
+    //   exclude: [
+    //     // /.*\.css$/,  this file will be exclude
+    //     // '/assets/*',
+    //     /.*\.ts$/,
+    //     /.*\.tsx$/,
+    //     /^\/@.+$/,
+    //     /\?t\=\d+$/,
+    //     /^\/favicon\.ico$/,
+    //     /^\/static\/.+/,
+    //     /^\/node_modules\/.*/,
+    //   ],
+    // }),
     tailwindcss(),
     reactRouter(),
-    tsconfigPaths(),
+    // tsconfigPaths(),
   ],
   ssr: {
     resolve: {
