@@ -15,7 +15,7 @@ export default async function handleRequest(
   request: Request,
   responseHeaders: Headers,
 ) {
-
+// https://github.com/vitejs/vite/issues/1984
 
   const stream = await renderToReadableStream(
     <StaticRouter location={request.url}>

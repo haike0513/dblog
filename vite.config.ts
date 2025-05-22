@@ -42,7 +42,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     // }),
     tailwindcss(),
     // reactRouter(),
-    // tsconfigPaths(),
+    tsconfigPaths(),
   ],
   // ssr: {
   //   resolve: {
