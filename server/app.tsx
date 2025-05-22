@@ -12,7 +12,7 @@ import { connectToWeb } from '@universal-middleware/express'
 // import type { IncomingMessage, ServerResponse } from "node:http";
 import handleRequest from "./middleware/entry.server.tsx";
 import {} from "@swc/core";
-import { DrizzleDB } from "./db/db.ts";
+import { db, DrizzleDB } from "./db/db.ts";
 var port = Number(Deno.env.get("PORT")) || 5173;
 var base = Deno.env.get("BASE") || "/";
 var root = Deno.env.get("ROOT") || Deno.cwd();
@@ -57,6 +57,10 @@ const app = new Hono<{ Variables: AppVariables }>();
 // app.use(vite.middlewares)
 
 app.use(logger());
+app.use(async (ctx, next) => {
+  ctx.set("db", db);
+  return await next();
+});
 app.get("/api/v1/hono", (c) => c.text("Hono!"));
 
 app.use(
