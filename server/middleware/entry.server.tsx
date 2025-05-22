@@ -17,6 +17,9 @@ export default async function handleRequest(
 ) {
   // https://github.com/vitejs/vite/issues/1984
 
+  const m = await import("../../app/routes/home.tsx");
+  console.log("m", m.loader);
+
   const stream = await renderToReadableStream(
     <StaticRouter location={request.url}>
       <html>

@@ -1,7 +1,7 @@
 // "use client"
 import { useCallback } from "react";
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+// import logoDark from "./logo-dark.svg";
+// import logoLight from "./logo-light.svg";
 
 export function Welcome({ message, list = [] }: { message: string, list: any[] }) {
   const handleNextPage = useCallback(() => {
@@ -16,12 +16,12 @@ export function Welcome({ message, list = [] }: { message: string, list: any[] }
           </h1>
           <div className="w-[500px] max-w-[100vw] p-4">
             <img
-              src={logoLight}
+              // src={logoLight}
               alt="React Router"
               className="block w-full dark:hidden"
             />
             <img
-              src={logoDark}
+              // src={logoDark}
               alt="React Router"
               className="hidden w-full dark:block"
             />
