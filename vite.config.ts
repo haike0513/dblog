@@ -4,9 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import devServer from "@hono/vite-dev-server";
-import react from '@vitejs/plugin-react-swc'
-import nodeAdapter from '@hono/vite-dev-server/bun'
-
+import react from "@vitejs/plugin-react-swc";
+import nodeAdapter from "@hono/vite-dev-server/bun";
+import path from "node:path";
 
 export default defineConfig(({ isSsrBuild }) => ({
   // build: {
@@ -20,7 +20,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     target: "ESNEXT",
   },
   server: {
-    watch: {}
+    watch: {},
   },
   plugins: [
     react(),
@@ -44,6 +44,11 @@ export default defineConfig(({ isSsrBuild }) => ({
     // reactRouter(),
     tsconfigPaths(),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./app"),
+    },
+  },
   // ssr: {
   //   resolve: {
   //     conditions: ["module", "deno", "node", "development|production"],
