@@ -34,12 +34,12 @@ export async function getViteServer() {
 await getViteServer();
 export function viteMiddleware() {
   return createMiddleware(async (ctx, next) => {
-    console.log("viteMiddleware", ctx.req.raw.url);
+    // console.log("viteMiddleware", ctx.req.raw.url);
     const viteDevServer = server;
     const h = connectToWeb(viteDevServer.middlewares);
     const response = await h(ctx.req.raw);
     // await next();
-    console.log("viteMiddleware", response);
+    // console.log("viteMiddleware", response);
     // console.log("viteMiddleware", viteDevServer.middlewares);
     if(response) {
       return response;
