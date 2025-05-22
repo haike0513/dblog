@@ -15,7 +15,7 @@ export default async function handleRequest(
   request: Request,
   responseHeaders: Headers,
 ) {
-// https://github.com/vitejs/vite/issues/1984
+  // https://github.com/vitejs/vite/issues/1984
 
   const stream = await renderToReadableStream(
     <StaticRouter location={request.url}>
@@ -23,21 +23,20 @@ export default async function handleRequest(
         <head>
           <title>Hello World</title>
           <script type="module">
-{`import RefreshRuntime from "/@react-refresh"
+            {`import RefreshRuntime from "/@react-refresh"
 RefreshRuntime.injectIntoGlobalHook(window)
 window.$RefreshReg$ = () => {}
 window.$RefreshSig$ = () => (type) => type
 window.__vite_plugin_react_preamble_installed__ = true`}
-</script>
+          </script>
+          <link rel="stylesheet" href="/app/App.css" />
         </head>
         <body>
           <App />
           <script type="module" src="/app/main.tsx" />
         </body>
       </html>
-
-
-    </StaticRouter>
+    </StaticRouter>,
   );
   responseHeaders.set("Content-Type", "text/html");
   return new Response(stream, {

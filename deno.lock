@@ -5,6 +5,7 @@
     "npm:@deno/vite-plugin@^1.0.4": "1.0.4_vite@6.3.5__@types+node@20.17.50__picomatch@4.0.2_@types+node@20.17.50",
     "npm:@hono/vite-dev-server@0.19": "0.19.1_hono@4.7.10",
     "npm:@radix-ui/react-icons@^1.3.2": "1.3.2_react@19.1.0",
+    "npm:@radix-ui/react-slot@^1.2.3": "1.2.3_@types+react@19.1.5_react@19.1.0",
     "npm:@react-router/dev@^7.5.3": "7.6.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_typescript@5.8.3_vite@6.3.5__@types+node@20.17.50__picomatch@4.0.2_@babel+core@7.27.1_react@19.1.0_react-dom@19.1.0__react@19.1.0_@types+node@20.17.50",
     "npm:@react-router/express@^7.5.3": "7.6.0_express@5.1.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_typescript@5.8.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:@react-router/node@^7.5.3": "7.6.0_react-router@7.6.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_typescript@5.8.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -25,6 +26,8 @@
     "npm:@universal-middleware/express@~0.4.15": "0.4.15",
     "npm:@universal-middleware/hono@~0.4.10": "0.4.10",
     "npm:@vitejs/plugin-react-swc@^3.9.0": "3.9.0_vite@6.3.5__@types+node@20.17.50__picomatch@4.0.2_@types+node@20.17.50",
+    "npm:class-variance-authority@~0.7.1": "0.7.1",
+    "npm:clsx@^2.1.1": "2.1.1",
     "npm:compression@^1.7.5": "1.8.0",
     "npm:cross-env@^7.0.3": "7.0.3",
     "npm:dedent@^1.6.0": "1.6.0",
@@ -32,14 +35,18 @@
     "npm:drizzle-orm@~0.43.1": "0.43.1_@types+pg@8.15.2_pg@8.16.0",
     "npm:express@^5.1.0": "5.1.0",
     "npm:isbot@^5.1.27": "5.1.28",
+    "npm:lucide-react@0.511": "0.511.0_react@19.1.0",
     "npm:morgan@^1.10.0": "1.10.0",
     "npm:pg@^8.15.6": "8.16.0",
     "npm:radix-ui@^1.4.2": "1.4.2_@types+react@19.1.5_@types+react-dom@19.1.5__@types+react@19.1.5_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react-dom@^19.1.0": "19.1.0_react@19.1.0",
     "npm:react-router@^7.5.3": "7.6.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react@^19.1.0": "19.1.0",
+    "npm:shadcn@2.1.6": "2.1.6_@babel+core@7.27.1_typescript@5.8.3",
     "npm:shadcn@latest": "2.1.6_@babel+core@7.27.1_typescript@5.8.3",
+    "npm:tailwind-merge@^3.3.0": "3.3.0",
     "npm:tailwindcss@^4.1.7": "4.1.7",
+    "npm:tw-animate-css@^1.3.0": "1.3.0",
     "npm:typescript@^5.8.3": "5.8.3",
     "npm:vite-tsconfig-paths@^5.1.4": "5.1.4_vite@6.3.5__@types+node@20.17.50__picomatch@4.0.2_typescript@5.8.3_@types+node@20.17.50",
     "npm:vite@^6.3.3": "6.3.5_@types+node@20.17.50_picomatch@4.0.2",
@@ -2489,6 +2496,12 @@
     "chownr@3.0.0": {
       "integrity": "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="
     },
+    "class-variance-authority@0.7.1": {
+      "integrity": "sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==",
+      "dependencies": [
+        "clsx"
+      ]
+    },
     "cli-cursor@4.0.0": {
       "integrity": "sha512-VGtlMu3x/4DOtIUwEkRezxUZ2lBacNJCHash0N0WeZDBS+7Ux1dm3XWAgWYxLJFMMdOeXMHXorshEFhbMSGelg==",
       "dependencies": [
@@ -2500,6 +2513,9 @@
     },
     "clone@1.0.4": {
       "integrity": "sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg=="
+    },
+    "clsx@2.1.1": {
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA=="
     },
     "code-block-writer@12.0.0": {
       "integrity": "sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w=="
@@ -3267,6 +3283,12 @@
     },
     "lru-cache@7.18.3": {
       "integrity": "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA=="
+    },
+    "lucide-react@0.511.0_react@19.1.0": {
+      "integrity": "sha512-VK5a2ydJ7xm8GvBeKLS9mu1pVK6ucef9780JVUjw6bAjJL/QXnd4Y0p7SPeOUMC27YhzNCZvm5d/QX0Tp3rc0w==",
+      "dependencies": [
+        "react"
+      ]
     },
     "magic-string@0.30.17": {
       "integrity": "sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==",
@@ -4145,6 +4167,9 @@
     "strip-final-newline@3.0.0": {
       "integrity": "sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw=="
     },
+    "tailwind-merge@3.3.0": {
+      "integrity": "sha512-fyW/pEfcQSiigd5SNn0nApUOxx0zB/dm6UDU/rEwc2c3sX2smWUNbapHv+QRqLGVp9GWX3THIa7MUGPo+YkDzQ=="
+    },
     "tailwindcss@4.1.7": {
       "integrity": "sha512-kr1o/ErIdNhTz8uzAYL7TpaUuzKIE6QPQ4qmSdxnoX/lo+5wmUHQA6h3L5yIqEImSRnAAURDirLu/BgiXGPAhg=="
     },
@@ -4224,6 +4249,9 @@
     },
     "tslib@2.8.1": {
       "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
+    },
+    "tw-animate-css@1.3.0": {
+      "integrity": "sha512-jrJ0XenzS9KVuDThJDvnhalbl4IYiMQ/XvpA0a2FL8KmlK+6CSMviO7ROY/I7z1NnUs5NnDhlM6fXmF40xPxzw=="
     },
     "type-is@2.0.1": {
       "integrity": "sha512-OZs6gsjF4vMp32qrCbiVSkrFmXtG/AZhY3t0iAMrMBiAZyV9oALtXO8hsrHbMXF9x6L3grlFuwW2oAz7cav+Gw==",
@@ -4431,6 +4459,7 @@
       "dependencies": [
         "npm:@hono/vite-dev-server@0.19",
         "npm:@radix-ui/react-icons@^1.3.2",
+        "npm:@radix-ui/react-slot@^1.2.3",
         "npm:@react-router/dev@^7.5.3",
         "npm:@react-router/express@^7.5.3",
         "npm:@react-router/node@^7.5.3",
@@ -4447,19 +4476,24 @@
         "npm:@universal-middleware/express@~0.4.15",
         "npm:@universal-middleware/hono@~0.4.10",
         "npm:@vitejs/plugin-react-swc@^3.9.0",
+        "npm:class-variance-authority@~0.7.1",
+        "npm:clsx@^2.1.1",
         "npm:compression@^1.7.5",
         "npm:cross-env@^7.0.3",
         "npm:drizzle-kit@~0.31.1",
         "npm:drizzle-orm@~0.43.1",
         "npm:express@^5.1.0",
         "npm:isbot@^5.1.27",
+        "npm:lucide-react@0.511",
         "npm:morgan@^1.10.0",
         "npm:pg@^8.15.6",
         "npm:radix-ui@^1.4.2",
         "npm:react-dom@^19.1.0",
         "npm:react-router@^7.5.3",
         "npm:react@^19.1.0",
+        "npm:tailwind-merge@^3.3.0",
         "npm:tailwindcss@^4.1.7",
+        "npm:tw-animate-css@^1.3.0",
         "npm:typescript@^5.8.3",
         "npm:vite-tsconfig-paths@^5.1.4",
         "npm:vite@^6.3.3"
