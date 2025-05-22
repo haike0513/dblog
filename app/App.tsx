@@ -3,6 +3,7 @@ import { useState } from "react";
 import * as React from "react";
 import { Tooltip } from "radix-ui";
 import { PlusIcon } from "@radix-ui/react-icons";
+import { Button } from "./components/ui/button.tsx";
 // import "./App.css";
 
 const TooltipDemo = () => {
@@ -38,6 +39,7 @@ export default function App() {
       >
         Hello World {count}
       </h1>
+	  <Button>Button</Button>
       <TooltipDemo />
     </div>
   );
