@@ -12,9 +12,13 @@ import { connectToWeb } from '@universal-middleware/express'
 // import type { IncomingMessage, ServerResponse } from "node:http";
 import handleRequest from "./middleware/entry.server.tsx";
 import {} from "@swc/core";
+import { DrizzleDB } from "./db/db.ts";
 var port = Number(Deno.env.get("PORT")) || 5173;
 var base = Deno.env.get("BASE") || "/";
 var root = Deno.env.get("ROOT") || Deno.cwd();
+export type AppVariables = {
+  db: DrizzleDB;
+};
 
 let server: ViteDevServer;
 
@@ -48,7 +52,7 @@ export function viteMiddleware() {
   });
 }
 
-const app = new Hono();
+const app = new Hono<{ Variables: AppVariables }>();
 
 // app.use(vite.middlewares)
 
