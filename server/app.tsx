@@ -82,7 +82,7 @@ app.use(
 // app.use("*", middlewareReactRouter)
 app.use("*", viteMiddleware());
 app.use("*", async (c, next) => {
-  return await handleRequest(c.req.raw, c.res.headers);
+  return await handleRequest(c, next);
 });
 
 export default app;
