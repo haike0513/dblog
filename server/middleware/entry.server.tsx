@@ -17,9 +17,9 @@ const handleRequest = createMiddleware(async (ctx, next) => {
 
   const m = await import("../../app/routes/home.tsx");
   const rs = await m.handler(ctx, next);
-  console.log("rs", rs);
+  // console.log("rs", rs);
   const ht = renderToString(<m.default data={rs}/>)
-  console.log("ht", ht);
+  // console.log("ht", ht);
 
   const stream = await renderToReadableStream(
     <StaticRouter location={ctx.req.url}>
