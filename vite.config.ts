@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import devServer from "@hono/vite-dev-server";
-import react from "@vitejs/plugin-react-swc";
+import react from '@vitejs/plugin-react'
 import nodeAdapter from "@hono/vite-dev-server/bun";
 import path from "node:path";
 

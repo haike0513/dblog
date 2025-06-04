@@ -11,7 +11,6 @@ import { connectToWeb } from '@universal-middleware/express'
 
 // import type { IncomingMessage, ServerResponse } from "node:http";
 import handleRequest from "./middleware/entry.server.tsx";
-import {} from "@swc/core";
 import { db, DrizzleDB } from "./db/db.ts";
 var port = Number(Deno.env.get("PORT")) || 5173;
 var base = Deno.env.get("BASE") || "/";
